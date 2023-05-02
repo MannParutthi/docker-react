@@ -11,6 +11,7 @@ RUN npm run build
 
 # Stage 2 - Run Server Phase -> Use the output from Stage 1
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # No need to specify the CMD as the default CMD of nginx image is to start the nginx server
 
