@@ -2,7 +2,7 @@
 # We need only the build folder in the container and not the source code for the production environment
 
 # Stage 1 - Builder Phase -> Output will be build folder
-FROM node:14.16.0-alpine as builder
+FROM node:16-alpine as builder
 WORKDIR '/app'
 COPY package.json .
 RUN npm install

@@ -37,13 +37,5 @@
   },
   "devDependencies": {
     "jest-watch-typeahead": "^0.6.5"
-  },
-  "jest": {
-    "testMatch": [
-      "**/__tests__/**/*.test.[jt]s?(x)"
-    ],
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!@private-repo-name)/"
-    ]
   }
 }
