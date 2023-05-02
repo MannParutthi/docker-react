@@ -1,0 +1,18 @@
+# To run docker build with this custom Dockerfile file name : "docker build -f Dockerfile.dev ."
+FROM node:14.16.0-alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+RUN npm i -D --exact jest-watch-typeahead@0.6.5
+# COPY . . => not required here because we are using volumes to map the local file system to the container file system (so any changes made in the local file system will be reflected in the container file system)
+
+CMD ["npm", "run", "start"]
+
+
+# Docker Volume : To map the local file system to the container file system so that any changes made in the local file system will be reflected in the container file system (no need to rebuild the image and the changes will be reflected in the container)
+# To run docker container with volume : "docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>"
+# -v : volume flag
+# -v /app/node_modules : to skip mapping (so : not used here) the node_modules folder in the container to the local file system (we do not have the node_modules folder in the local file systems so avoid overriding it on the container otherwise we will not be able to run the app)
+# -v $(pwd):/app : to map/bind the present/current working directory (/frontend) to the /app folder in the container (provide reference of everything that is in /frontend folder to the /app folder in the container)
