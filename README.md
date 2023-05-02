@@ -1,6 +1,6 @@
-## React App + Travis CI + Docker + AWS Beanstalk
+# React App + Travis CI + Docker + AWS Beanstalk
 
-# Docker Compose config Update
+## Docker Compose config Update
 
 Make sure to follow the steps in the earlier lecture note to rename your development docker compose file and create a new production compose file:
 
@@ -8,7 +8,7 @@ https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lect
 
 
 
-# Create EC2 IAM Role
+## Create EC2 IAM Role
 
 1. Go to AWS Management Console
 
@@ -28,7 +28,7 @@ https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lect
 
 
 
-# Create EBS Environment
+## Create EBS Environment
 
 1. Go to AWS Management Console
 
@@ -58,7 +58,7 @@ If both Existing Service Roles and EC2 Instance Profiles are populated with defa
 
 
 
-# Update Object Ownership of S3 Bucket
+## Update Object Ownership of S3 Bucket
 
 1. Go to AWS Management Console
 
@@ -76,7 +76,7 @@ If both Existing Service Roles and EC2 Instance Profiles are populated with defa
 
 
 
-# Add AWS configuration details to .travis.yml file's deploy script
+## Add AWS configuration details to .travis.yml file's deploy script
 
 1. Set the region. The region code can be found by clicking the region in the toolbar next to your username.
 
@@ -102,7 +102,7 @@ eg: 'elasticbeanstalk-us-east-1-923445599289'
 
 
 
-# Create an IAM User
+## Create an IAM User
 
 1. Search for the "IAM Security, Identity & Compliance Service"
 
@@ -142,7 +142,7 @@ Copy and/or download the Access Key ID and Secret Access Key to use in the Travi
 
 
 
-# Travis Variable Setup
+## Travis Variable Setup
 
 1. Go to your Travis Dashboard and find the project repository for the application we are working on.
 
@@ -154,7 +154,7 @@ Copy and/or download the Access Key ID and Secret Access Key to use in the Travi
 
 
 
-# Deploying App
+## Deploying App
 
 1. Make a small change to your src/App.js file in the greeting text.
 
@@ -175,7 +175,7 @@ git push origin main
 
 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
