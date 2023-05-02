@@ -5,7 +5,7 @@ WORKDIR '/app'
 
 COPY package.json .
 RUN npm install
-RUN npm i -D --exact jest-watch-typeahead@0.6.5
+COPY . .
 # COPY . . => not required here because we are using volumes to map the local file system to the container file system (so any changes made in the local file system will be reflected in the container file system)
 
 CMD ["npm", "run", "start"]
